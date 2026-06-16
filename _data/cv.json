@@ -1,0 +1,78 @@
+{
+  "basics": {
+    "name": "Xiaokang Xue",
+    "email": "2212069@mail.nankai.edu.cn",
+    "phone": "",
+    "website": "https://Xiaokang-Xue.github.io",
+    "summary": "Software Engineering student at Nankai University.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Tianjin",
+      "countryCode": "CN",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "Xiaokang-Xue",
+        "url": "https://github.com/Xiaokang-Xue"
+      }
+    ]
+  },
+  "work": [],
+  "education": [
+    {
+      "institution": "Nankai University",
+      "area": "Software Engineering",
+      "studyType": "B.E.",
+      "startDate": "2022",
+      "endDate": "2026",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Migu M-Zone Most Valuable Application Award",
+      "date": "2025",
+      "awarder": "",
+      "summary": "3/1143, top 0.3%, 50,000 CNY"
+    },
+    {
+      "title": "National Scholarship",
+      "date": "2025",
+      "awarder": "",
+      "summary": "3/130, top 2.4%, 10,000 CNY"
+    },
+    {
+      "title": "Gong-Neng Scholarship of Nankai University",
+      "date": "2024",
+      "awarder": "Nankai University",
+      "summary": "Top 5%, 5,000 CNY"
+    },
+    {
+      "title": "Outstanding Student of Nankai University",
+      "date": "2024, 2025",
+      "awarder": "Nankai University",
+      "summary": ""
+    }
+  ],
+  "skills": [],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Software Engineering",
+      "keywords": []
+    },
+    {
+      "name": "Computer Science",
+      "keywords": []
+    }
+  ],
+  "references": [],
+  "publications": [],
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
+}

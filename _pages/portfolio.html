@@ -1,0 +1,18 @@
+---
+layout: archive
+title: "Projects"
+permalink: /portfolio/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign project_count = site.portfolio | size %}
+
+{% if project_count == 0 %}
+<p>Selected projects will be added here soon.</p>
+{% else %}
+  {% for post in site.portfolio %}
+  {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
