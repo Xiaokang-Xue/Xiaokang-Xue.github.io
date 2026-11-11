@@ -39,4 +39,4 @@ git push origin main
 - 页面格式和基础样式：[Guohuan Xie](https://guohuan-xie.github.io/)、[AcademicPages](https://github.com/academicpages/academicpages.github.io)、Minimal Mistakes。保留原 MIT 许可证。
 - Noto Serif 字体和 Font Awesome 图标字体：许可证见 `assets/fonts/` 和 `assets/webfonts/`。
 - 论文及作者信息：[ACL Anthology](https://aclanthology.org/2026.findings-emnlp.1134/)。论文示意图来自共同作者主页。
-- 个人资料及奖项由本人提供；咪咕奖项按本人要求显示为 Grand Prize / 特等奖。本科只展示学校和学位。
+- 个人资料及奖项由本人提供；咪咕奖项按本人要求显示为 Grand Prize / 特等奖。教育条目统一展示学校、就读年份和学位。

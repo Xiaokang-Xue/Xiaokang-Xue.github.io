@@ -20,3 +20,23 @@ h2[id] { scroll-margin-top: 90px; }
 /* Crop only the official emblem file's white margins at display time. */
 .zju-logo { display: block; width: 56px; height: 56px; flex-shrink: 0; overflow: hidden; }
 .edu-card .zju-logo img { width: 102px; height: 81px; max-width: none; position: relative; left: -22px; top: -14px; }
+
+/* Small typography refinements within the existing two-column layout. */
+.main-heading { text-align: left; margin-bottom: 0.75em; }
+.author__content { line-height: 1.5; }
+.author__name { line-height: 1.5; }
+.author__chinese-name { display: block; margin-top: 3px; font-size: 0.88em; font-weight: 400; color: #666; }
+.author__bio { margin-top: 8px; margin-bottom: 16px; font-size: 13px; line-height: 1.6; color: #666; }
+.edu-card-title { line-height: 1.5; }
+.edu-card-date { font-variant-numeric: tabular-nums; }
+.publication-authors { line-height: 1.7; }
+
+/* Keep the expanded navigation clear of the content on smaller screens. */
+@media (max-width: 900px) {
+  body { padding-top: 100px; }
+  .greedy-nav .visible-links { display: flex; flex-wrap: wrap; gap: 0 16px; }
+  .greedy-nav .visible-links > li { display: block; font-size: 12px; }
+  .greedy-nav .visible-links > li:first-child { width: 100%; padding-right: 0; font-size: 14px; }
+  .greedy-nav .visible-links a { margin: 0; padding: 0.45rem 0; }
+  h2[id] { scroll-margin-top: 120px; }
+}
