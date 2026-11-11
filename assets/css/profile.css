@@ -1,0 +1,22 @@
+ .item-list { display: flex; flex-direction: column; gap: 16px; margin: 1em 0; } .item-card { display: flex; align-items: center; gap: 16px; padding: 18px 20px; background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); } .item-card-logo { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; } .item-card-thumb { position: relative; flex-shrink: 0; width: 200px; height: 100px; overflow: hidden; } .item-card-thumb img { width: 200px !important; height: 100px !important; max-width: none !important; object-fit: fill; display: block; } .item-card-thumb img.item-card-thumb-image--contain { object-fit: contain !important; background: #fff; } .item-card-badge { position: absolute; top: 0; left: 0; background-color: #2b6cb0; color: #fff; font-size: 11px; font-weight: bold; padding: 4px 8px; line-height: 1.2; z-index: 1; } .item-card-body { min-width: 0; flex: 1; } .mermaid { margin: 1.5em 0; overflow-x: auto; text-align: center; } .mermaid svg { height: auto; max-width: 100%; }
+
+ body, .page__content { background-color: #FFFFFF; font-family: "Noto Serif", "Noto Serif SC", "Times New Roman", Times, Georgia, serif; font-size: 15px; } .main-heading { font-family: "Noto Serif", "Noto Serif SC", "Times New Roman", Times, Georgia, serif; font-weight: 700; text-align: center; color: #ca6f6f; } .page__content a, div.markdown-body a { text-decoration: none !important; color: #ca6f6f; } .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 1em 0; } .edu-card { display: flex; align-items: flex-start; gap: 16px; padding: 18px 20px; background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); } .edu-card img { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; } .edu-card-title { font-weight: 700; font-size: 15px; color: #333; margin-bottom: 4px; } .edu-card-date { font-size: 13px; color: #888; margin-bottom: 6px; } .edu-card-desc { font-size: 14px; color: #555; line-height: 1.5; } @media (max-width: 768px) { .edu-grid { grid-template-columns: 1fr; } }
+/* Small-screen fixes and accessibility; desktop layout retains the reference theme. */
+.publication-authors { font-size: 13px; }
+.author__urls a { overflow-wrap: anywhere; }
+.author__urls.is-open { display: block; }
+.no-js .author__urls { display: block; }
+.no-js #contact-toggle { display: none; }
+:focus-visible { outline: 2px solid #ca6f6f; outline-offset: 3px; }
+h2[id] { scroll-margin-top: 90px; }
+@media (max-width: 600px) {
+  .greedy-nav .visible-links { display: flex; flex-wrap: wrap; }
+  .greedy-nav .visible-links > li { display: block; }
+  .greedy-nav .visible-links > li:first-child { width: 100%; }
+  .greedy-nav .visible-links > li:last-child a { margin-left: 0; }
+  .item-card { flex-direction: column; align-items: flex-start; }
+}
+
+/* Crop only the official emblem file's white margins at display time. */
+.zju-logo { display: block; width: 56px; height: 56px; flex-shrink: 0; overflow: hidden; }
+.edu-card .zju-logo img { width: 102px; height: 81px; max-width: none; position: relative; left: -22px; top: -14px; }
