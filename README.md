@@ -1,101 +1,84 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Xiaokang Xue · 薛晓康
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+个人学术主页：**https://xiaokang-xue.github.io/**
 
-# Getting Started
+这是一个可直接由 GitHub Pages 托管的静态网站。无需 Jekyll、Ruby、Node.js 或构建步骤，也不依赖外部字体、统计脚本和前端 CDN。主要内容直接写在 HTML 中，即使禁用 JavaScript 也能阅读；脚本仅增强主题、中英切换和交互。
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## 最简单的修改方法：直接在 GitHub 上编辑
 
-See more info at https://academicpages.github.io/
+1. 打开 [这个仓库](https://github.com/Xiaokang-Xue/Xiaokang-Xue.github.io)。
+2. 点击要改的文件，例如 `index.html`，再点右上角铅笔图标。
+3. 修改文字，点 **Commit changes**，写一句说明（如 `Update research interests`），提交到 `main`。
+4. 等待 Pages 自动更新。在仓库 **Actions** 中可以看到 `pages build and deployment` 的进度。
+5. 打开主页检查。通常几分钟生效，GitHub 官方说明可能需要约 10 分钟；如果仍看到旧版，按 `Ctrl + F5` 强制刷新。
 
-### Additional Tutorials
+中文与英文需要一起更新：英文正文在 `index.html`，对应中文在 `assets/main.js` 的 `zh` 字典中。标有 `data-i18n="..."` 的文字使用同名键对应。姓名、邮箱和论文等共用内容通常只需改 HTML；邮箱同时出现于页头介绍、页脚和结构化数据中，修改时请一并更新。
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+## 文件对应什么
 
-## Running locally
+| 文件 | 内容 |
+| --- | --- |
+| `index.html` | 个人介绍、研究方向、论文、教育、奖项、联系信息，以及搜索引擎元数据 |
+| `assets/style.css` | 配色、字体、间距、桌面和手机布局、打印样式 |
+| `assets/main.js` | 中文翻译、深浅主题、语言切换、去掩码示意、引用复制 |
+| `assets/evalmem.bib` | EvalMem 的 BibTeX 下载文件 |
+| `assets/favicon.svg` | 浏览器标签页中的个人图标 |
+| `.nojekyll` | 告诉 GitHub Pages 直接发布静态文件，勿删除 |
+| `404.html` | 访问不存在的地址时显示的页面 |
+| `robots.txt`、`sitemap.xml` | 搜索引擎索引相关文件 |
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+## GitHub Pages 与网址
 
-1. Clone the repository and made updates as detailed above.
+这个仓库名与账号名相对应，所以它是**用户主页仓库**。固定网址是 `https://xiaokang-xue.github.io/`，地址中无需再添加仓库名，也不需要购买域名。
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+在 [Settings → Pages](https://github.com/Xiaokang-Xue/Xiaokang-Xue.github.io/settings/pages) 中保持：
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+- **Source**：Deploy from a branch
+- **Branch**：`main`
+- **Folder**：`/ (root)`
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+保存后，向 `main` 提交就会自动更新。无需手动上传到其他服务器。仓库右侧的 About 网站链接也指向该主页。除非以后购买自己的域名，否则不要添加 `CNAME` 文件。
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+官方说明：[创建 GitHub Pages 网站](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+## 在电脑上修改
 
-## Using Docker
+如果已有本地 Git 仓库，用 VS Code 打开它。编辑、保存后，在该文件夹终端执行：
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+```powershell
+git pull --ff-only
+git add index.html assets README.md
+git commit -m "Update homepage"
+git push origin main
 ```
 
-You should now be able to access the website from `localhost:4000`.
+如果增加了其他文件，把对应路径也加到 `git add` 中。若还没有本地仓库，先执行一次：
 
-### Using the DevContainer in VS Code
+```powershell
+git clone https://github.com/Xiaokang-Xue/Xiaokang-Xue.github.io.git
+cd Xiaokang-Xue.github.io
+```
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+双击 `index.html` 就能预览布局。要测试引用复制等需要安全环境的功能，可在文件夹运行：
 
-# Maintenance
+```powershell
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+然后访问 `http://127.0.0.1:8000`，完成后按 `Ctrl + C` 停止服务。
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+## 常见更新
 
-## Bugfixes and enhancements
+- **新增论文**：复制 `index.html` 中 `<article class="publication">…</article>`，更新作者、会议、标题、摘要和链接；新论文自己的引用也应更新，避免重复 `id`。
+- **修改奖项**：在 `id="awards"` 区域编辑 `.award-row`，同时同步中文翻译。
+- **添加真实头像**：将照片上传到 `assets/portrait.jpg`，把 `.signature-art` 的整个 `div` 换为 `<div class="portrait-frame"><img src="assets/portrait.jpg" alt="Xiaokang Xue"></div>`。当前「薛」字图形是原创文字标识。
+- **添加 CV、Google Scholar 或新栏目**：等有实际文件或有效链接后再添加入口。当前未显示实习、项目、学术服务等空栏目。
+- **改回历史版本**：原 Academic Pages 模板和之前的个人信息保留在 Git 提交历史中，不需要保留模板文件才能回退。
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+## 内容与设计来源
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+个人经历和奖项由本人提供；2025 年咪咕奖项按本人要求标为 Grand Prize / 特等奖。本科仅展示学校和学位。
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+EvalMem 的作者、会议与引用信息来自 [ACL Anthology](https://aclanthology.org/2026.findings-emnlp.1134/)，另附 [arXiv](https://arxiv.org/abs/2609.22231) 与 [代码](https://github.com/ZeyuuLiu/EvalMem)。页面中的三个环节是概念梳理；扩散小交互是迭代去掩码示意，不代表模型输出或实验结果。
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+学术信息结构参考了 [Guohuan Xie](https://guohuan-xie.github.io/)、[Jon Barron](https://jonbarron.info/)、[Lilian Weng](https://lilianweng.github.io/) 和 [Sherry Yang](https://sherryy.github.io/) 的主页。本次页面布局、文字标识、配色与交互单独实现。原仓库源自 Academic Pages，保留其 MIT 许可证。
