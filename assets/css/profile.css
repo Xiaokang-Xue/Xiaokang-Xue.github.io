@@ -25,8 +25,28 @@ h2[id] { scroll-margin-top: 90px; }
 /* Small typography refinements within the existing two-column layout. */
 .main-heading { text-align: left; margin-bottom: 0.75em; }
 .author__content { line-height: 1.5; }
-.author__name { line-height: 1.5; }
-.author__chinese-name { display: block; margin-top: 3px; font-size: 0.88em; font-weight: 400; color: #666; }
+.sidebar .author__name {
+  margin: 14px 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: #344653;
+}
+.sidebar .author__chinese-name {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  color: #67747f;
+}
+@media (max-width: 924px) {
+  .sidebar .author__name { margin: 0; font-size: 17px; }
+  .sidebar .author__chinese-name { margin-top: 4px; font-size: 13px; }
+  .sidebar .author__content { padding-right: 18px; }
+}
 .edu-card-title { line-height: 1.5; }
 .edu-card-date { font-variant-numeric: tabular-nums; }
 .publication-authors { line-height: 1.7; }
